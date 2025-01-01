@@ -5,7 +5,11 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <header class="header"><RouterLink to="/">Mori Cocinema</RouterLink></header>
   <main>
-    <RouterView />
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </main>
   <footer class="footer">
     <p class="footer__text">Test Task, 2022</p>
@@ -16,4 +20,13 @@ import { RouterLink, RouterView } from 'vue-router'
   </footer>
 </template>
 
-<style scoped></style>
+<style scoped>
+.fade-enter-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

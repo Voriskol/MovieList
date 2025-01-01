@@ -5,3 +5,5 @@ import MovieList from '@/components/MovieList.vue'
 <template>
   <MovieList />
 </template>
+
+<style scoped></style>

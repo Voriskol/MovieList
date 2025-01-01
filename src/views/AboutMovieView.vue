@@ -6,9 +6,7 @@ defineProps<{
 </script>
 
 <template>
-  <main>
-    <AboutMovie :id="id" />
-  </main>
+  <AboutMovie :id="id" />
 </template>
 
 <style></style>

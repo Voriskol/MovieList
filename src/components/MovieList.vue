@@ -3,7 +3,8 @@ import { ref } from 'vue'
 import { data } from '../api/data'
 import MovieCard from './MovieCard.vue'
 import router from '@/router'
-const movies = ref<any>(data.items)
+import type { IMovie } from '@/interfaces'
+const movies = ref<Array<IMovie>>(data.items)
 
 const goToMovie = async (id: number) => {
   await router.push({
@@ -24,5 +25,8 @@ const goToMovie = async (id: number) => {
     :poster="movie.poster"
     :name="movie.name"
     :description="movie.description"
+    :rating="movie.rating"
+    :genre="movie.genre"
+    :duration="movie.duration"
   />
 </template>
