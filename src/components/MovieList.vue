@@ -17,6 +17,7 @@ const goToMovie = async (id: number) => {
 </script>
 
 <template>
+  <h2 class="movieList__title">All Movies</h2>
   <MovieCard
     @click="goToMovie(movie.id)"
     v-for="(movie, index) in movies"
@@ -30,3 +31,12 @@ const goToMovie = async (id: number) => {
     :duration="movie.duration"
   />
 </template>
+
+<style scoped>
+.movieList__title {
+  width: 100%;
+  font-size: 54px;
+  padding-left: 40px;
+  color: white;
+}
+</style>
