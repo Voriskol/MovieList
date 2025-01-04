@@ -12,7 +12,7 @@ import { RouterLink, RouterView } from 'vue-router'
     </router-view>
   </main>
   <footer class="footer">
-    <p class="footer__text">Test Task, 2022</p>
+    <p class="footer__text">Test Task, 2024</p>
     <address>
       <a class="address__text phone" href="tel:518-363-2171">518-363-2171</a>
       <p class="address__text">91 Park St. Fairhope, AL 36532</p>

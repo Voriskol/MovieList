@@ -4,6 +4,7 @@ import TheCarousel from './TheCarousel.vue'
 <template>
   <section class="welcome">
     <h1>All free movies based here. <br />You are welcome!</h1>
+    <h2>BEST RATING</h2>
     <TheCarousel />
   </section>
 </template>
@@ -14,7 +15,8 @@ import TheCarousel from './TheCarousel.vue'
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 500px;
+  height: max-content;
+  padding-bottom: 10px;
   background-image: url('@/assets/theater.png');
   background-size: 100%;
   background-position: center;
@@ -27,6 +29,11 @@ import TheCarousel from './TheCarousel.vue'
   font-size: 60px;
   color: white;
   padding: 15px;
+}
+
+.welcome h2 {
+  margin: 0 auto;
+  color: white;
 }
 
 .line {

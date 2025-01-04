@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.app.json",
-  "include": ["src/**/__tests__/*", "env.d.ts"],
+  "include": ["src/**/__tests__/*", "env.d.ts", "src/components/__tests__/BadgeItem.spec.ts"],
   "exclude": [],
   "compilerOptions": {
     "lib": [],

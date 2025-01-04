@@ -7,8 +7,9 @@ import MovieCard from './MovieCard.vue'
 import type { IMovie } from '@/interfaces'
 
 const carouselConfig = {
-  itemsToShow: 2.5,
+  autoplay: 2000,
   wrapAround: true,
+  itemsToShow: 3,
 }
 const bestFilms = ref<Array<IMovie>>()
 const findBestFilms = () => {
@@ -20,12 +21,15 @@ onMounted(findBestFilms)
 <template>
   <Carousel v-bind="carouselConfig">
     <Slide v-for="movie in bestFilms" :key="movie.id">
-      <div class="carousel__item">{{ movie.name }}</div>
+      <div class="carousel__item">
+        <img :src="movie.poster" alt="" />
+      </div>
     </Slide>
-
-    <template #addons>
-      <Navigation />
-      <Pagination />
-    </template>
   </Carousel>
 </template>
+
+<style scoped>
+.carousel__item img {
+  border: 5px solid white;
+}
+</style>
